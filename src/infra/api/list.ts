@@ -1,6 +1,6 @@
 import type { ListApiPort, ListFormApiCreateProps } from "@/app/lists";
 import type { List } from "@/domain/entities/list";
-import { delay } from "@/utils";
+import { delay } from "@/shared/lib/utils/promise";
 import { faker } from "@faker-js/faker";
 
 let $instance: ListApiPort | undefined;

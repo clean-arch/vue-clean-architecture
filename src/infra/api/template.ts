@@ -1,7 +1,4 @@
-import type { TemplateApiPort } from "@/app_core/ports/template";
-import { delay } from "@/utils";
 import { faker } from "@faker-js/faker";
-import type { Template } from "../domain/template";
 
 export class MockTemplateApi implements TemplateApiPort {
   #templates: Template[];

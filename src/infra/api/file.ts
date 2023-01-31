@@ -1,6 +1,6 @@
 import type { FileApiPort } from "@/app/files";
 import type { AppFile } from "@/domain/entities/file";
-import { delay } from "@/utils";
+import { delay } from "@/shared/lib/utils/promise";
 import { faker } from "@faker-js/faker";
 
 let $instance: FileApiPort | undefined;

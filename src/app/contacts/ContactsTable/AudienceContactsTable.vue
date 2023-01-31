@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, watch } from "vue";
-import { formatDate } from "@/utils";
+import { formatDate } from "@/shared/lib/utils/date";
 import { useContactsTableStore } from "./store";
 
 const columns = computed(() => [

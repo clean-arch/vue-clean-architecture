@@ -1,4 +1,4 @@
-import type { Entity } from "@/domain/common/entity";
+import type { Entity } from "./entity";
 
 export interface BaseFetchManyApiPort<E extends Entity, P = unknown> {
   fetchMany(props: P): Promise<E[]>;

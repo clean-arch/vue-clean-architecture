@@ -5,7 +5,7 @@ import type {
 } from "@/app/contacts";
 import type { EntityId } from "@/domain/common/entity";
 import type { Contact } from "@/domain/entities/contact";
-import { delay } from "@/utils";
+import { delay } from "@/shared/lib/utils/promise";
 import { faker } from "@faker-js/faker";
 
 let $instance: MockContactApi | undefined;

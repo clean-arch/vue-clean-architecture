@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useFilesTableStore } from "./store";
-import { formatDate } from "@/utils";
+import { formatDate } from "@/shared/lib/utils/date";
 
 const filesStore = useFilesTableStore();
 
