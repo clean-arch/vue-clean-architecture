@@ -3,8 +3,8 @@ import type {
   ContactFormApiCreateProps,
   ContactsTableApiFetchManyProps,
 } from "@/app/contacts";
-import type { EntityId } from "@/domain/common/entity";
 import type { Contact } from "@/domain/entities/contact";
+import type { EntityId } from "@/shared/lib/entity";
 import { delay } from "@/shared/lib/utils/promise";
 import { faker } from "@faker-js/faker";
 
