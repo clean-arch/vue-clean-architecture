@@ -1,17 +1,15 @@
 import { useLoader } from "@/shared/lib/composables/loader";
-import { validInject } from "@/shared/lib/di";
+import { defineInjectKey, validInject } from "@/shared/lib/di";
 import { storeToRefs } from "pinia";
 import { reactive } from "vue";
 import { useListsStore } from "../store";
 import type { ListsTableApiPort } from "./ports";
 
-export const LISTS_TABLE_API_PROVIDE_KEY = Symbol("ListsTableApi");
+export const LISTS_TABLE_API_PROVIDE_KEY =
+  defineInjectKey<ListsTableApiPort>("ListsTableApi");
 
 export function useListsTableStore() {
-  const api = validInject<ListsTableApiPort>(
-    LISTS_TABLE_API_PROVIDE_KEY,
-    "ContactsTableApiPort"
-  );
+  const api = validInject(LISTS_TABLE_API_PROVIDE_KEY);
 
   const listsStore = useListsStore();
   const { lists } = storeToRefs(listsStore);

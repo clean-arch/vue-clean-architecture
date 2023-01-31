@@ -1,16 +1,14 @@
 import { useLoader } from "@/shared/lib/composables/loader";
-import { validInject } from "@/shared/lib/di";
+import { defineInjectKey, validInject } from "@/shared/lib/di";
 import { reactive } from "vue";
 import { useContactsStore } from "../store";
 import type { ContactFormApiCreateProps, ContactFormApiPort } from "./ports";
 
-export const CONTACT_FORM_API_PROVIDE_KEY = Symbol("ContactFormApi");
+export const CONTACT_FORM_API_PROVIDE_KEY =
+  defineInjectKey<ContactFormApiPort>("ContactFormApi");
 
 export function useContactFormStore() {
-  const api = validInject<ContactFormApiPort>(
-    CONTACT_FORM_API_PROVIDE_KEY,
-    "ContactFormApiPort"
-  );
+  const api = validInject(CONTACT_FORM_API_PROVIDE_KEY);
 
   const contactsStore = useContactsStore();
 

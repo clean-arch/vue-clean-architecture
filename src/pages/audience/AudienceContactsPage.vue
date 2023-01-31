@@ -25,7 +25,7 @@ function openAddContactForm() {
 const selectedListId = ref("");
 watch(
   () => route.params.listId,
-  (listId) => {
+  (listId: string) => {
     selectedListId.value = listId ?? "";
   },
   { immediate: true }

@@ -1,15 +1,15 @@
-import { inject } from "vue";
+import { inject, type InjectionKey } from "vue";
 
-export function validInject<T>(key: Symbol, interfaceName?: string): T {
-  const api = inject<T>(key);
+export function defineInjectKey<T>(name: string): InjectionKey<T> {
+  return Symbol(name);
+}
+
+export function validInject<T>(key: InjectionKey<T>): T {
+  const api = inject(key);
   if (api == null) {
-    let errorMessage = `You have to provide "${key.toString()}"`;
-    if (interfaceName) {
-      errorMessage += `, that implement ${interfaceName} interface`;
-    }
+    const errorMessage = `You have to provide "${key.toString()}"`;
     throw new Error(errorMessage);
   }
-  // TODO: it would be great if we could check the type for the injected object.
 
   return api;
 }

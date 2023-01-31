@@ -1,16 +1,14 @@
 import { useLoader } from "@/shared/lib/composables/loader";
-import { validInject } from "@/shared/lib/di";
+import { defineInjectKey, validInject } from "@/shared/lib/di";
 import { computed, reactive } from "vue";
 import { useListsStore } from "../store";
 import type { ListsSelectApiPort } from "./ports";
 
-export const LISTS_SELECT_API_PROVIDE_KEY = Symbol("ListsTableApi");
+export const LISTS_SELECT_API_PROVIDE_KEY =
+  defineInjectKey<ListsSelectApiPort>("ListsTableApi");
 
 export function useListsSelectStore() {
-  const api = validInject<ListsSelectApiPort>(
-    LISTS_SELECT_API_PROVIDE_KEY,
-    "ListsSelectApiPort"
-  );
+  const api = validInject(LISTS_SELECT_API_PROVIDE_KEY);
 
   const listsStore = useListsStore();
 

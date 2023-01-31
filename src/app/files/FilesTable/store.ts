@@ -1,17 +1,15 @@
 import { useLoader } from "@/shared/lib/composables/loader";
-import { validInject } from "@/shared/lib/di";
+import { defineInjectKey, validInject } from "@/shared/lib/di";
 import { storeToRefs } from "pinia";
 import { reactive } from "vue";
 import { useFilesStore } from "../store";
 import type { FilesTableApiPort } from "./ports";
 
-export const FILES_TABLE_API_PROVIDE_KEY = Symbol("FilesTableApi");
+export const FILES_TABLE_API_PROVIDE_KEY =
+  defineInjectKey<FilesTableApiPort>("FilesTableApi");
 
 export function useFilesTableStore() {
-  const api = validInject<FilesTableApiPort>(
-    FILES_TABLE_API_PROVIDE_KEY,
-    "ContactsTableApiPort"
-  );
+  const api = validInject(FILES_TABLE_API_PROVIDE_KEY);
 
   const filesStore = useFilesStore();
   const { files } = storeToRefs(filesStore);
