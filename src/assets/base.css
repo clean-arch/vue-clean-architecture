@@ -1,0 +1,176 @@
+/* catppuccin latte color palette from <https://github.com/catppuccin/catppuccin> */
+:root {
+  /* Rosewater 	  #dc8a78 	rgb(220, 138, 120) 	hsl(11,  59%, 67%) */
+  /* Flamingo 	  #dd7878 	rgb(221, 120, 120) 	hsl(0,   60%, 67%) */
+  /* Pink 	      #ea76cb 	rgb(234, 118, 203) 	hsl(316, 73%, 69%) */
+  /* Mauve 	      #8839ef 	rgb(136, 57,  239) 	hsl(266, 85%, 58%) */
+  /* Red 	        #d20f39 	rgb(210, 15,  57)   hsl(347, 87%, 44%) */
+  /* Maroon 	    #e64553 	rgb(230, 69,  83)   hsl(355, 76%, 59%) */
+  /* Peach 	      #fe640b 	rgb(254, 100, 11)   hsl(22,  99%, 52%) */
+  /* Yellow 	    #df8e1d 	rgb(223, 142, 29) 	hsl(35,  77%, 49%) */
+  /* Green 	      #40a02b 	rgb(64,  160, 43)   hsl(109, 58%, 40%) */
+  /* Teal 	      #179299 	rgb(23,  146, 153) 	hsl(183, 74%, 35%) */
+  /* Sky 	        #04a5e5 	rgb(4,   165, 229)  hsl(197, 97%, 46%) */
+  /* Sapphire 	  #209fb5 	rgb(32,  159, 181) 	hsl(189, 70%, 42%) */
+  /* Blue 	      #1e66f5 	rgb(30,  102, 245) 	hsl(220, 91%, 54%) */
+  /* Lavender 	  #7287fd 	rgb(114, 135, 253) 	hsl(231, 97%, 72%) */
+  /* Text 	      #4c4f69 	rgb(76,  79,  105)  hsl(234, 16%, 35%) */
+  /* Subtext1 	  #5c5f77 	rgb(92,  95,  119)  hsl(233, 13%, 41%) */
+  /* Subtext0 	  #6c6f85 	rgb(108, 111, 133) 	hsl(233, 10%, 47%) */
+  /* Overlay2 	  #7c7f93 	rgb(124, 127, 147) 	hsl(232, 10%, 53%) */
+  /* Overlay1 	  #8c8fa1 	rgb(140, 143, 161) 	hsl(231, 10%, 59%) */
+  /* Overlay0 	  #9ca0b0 	rgb(156, 160, 176) 	hsl(228, 11%, 65%) */
+  /* Surface2 	  #acb0be 	rgb(172, 176, 190) 	hsl(227, 12%, 71%) */
+  /* Surface1 	  #bcc0cc 	rgb(188, 192, 204) 	hsl(225, 14%, 77%) */
+  /* Surface0 	  #ccd0da 	rgb(204, 208, 218) 	hsl(223, 16%, 83%) */
+  /* Base 	      #eff1f5 	rgb(239, 241, 245) 	hsl(220, 23%, 95%) */
+  /* Mantle 	    #e6e9ef 	rgb(230, 233, 239) 	hsl(220, 22%, 92%) */
+  /* Crust 	      #dce0e8 	rgb(220, 224, 232) 	hsl(220, 21%, 89%) */
+
+  --latte-rosewater: hsl(11, 59%, 67%);
+  --latte-flamingo: hsl(0, 60%, 67%);
+  --latte-pink: hsl(316, 73%, 69%);
+  --latte-mauve: hsl(266, 85%, 58%);
+  --latte-red: hsl(347, 87%, 44%);
+  --latte-maroon: hsl(355, 76%, 59%);
+  --latte-peach: hsl(22, 99%, 52%);
+  --latte-yellow: hsl(35, 77%, 49%);
+  --latte-green: hsl(109, 58%, 40%);
+  --latte-teal: hsl(183, 74%, 35%);
+  --latte-sky: hsl(197, 97%, 46%);
+  --latte-sapphire: hsl(189, 70%, 42%);
+  --latte-blue: hsl(220, 91%, 54%);
+  --latte-lavender: hsl(231, 97%, 72%);
+  --latte-text: hsl(234, 16%, 35%);
+  --latte-subtext1: hsl(233, 13%, 41%);
+  --latte-subtext0: hsl(233, 10%, 47%);
+  --latte-overlay2: hsl(232, 10%, 53%);
+  --latte-overlay1: hsl(231, 10%, 59%);
+  --latte-overlay0: hsl(228, 11%, 65%);
+  --latte-surface2: hsl(227, 12%, 71%);
+  --latte-surface1: hsl(225, 14%, 77%);
+  --latte-surface0: hsl(223, 16%, 83%);
+  --latte-base: hsl(220, 23%, 95%);
+  --latte-mantle: hsl(220, 22%, 92%);
+  --latte-crust: hsl(220, 21%, 89%);
+}
+
+/* catppuccin frappe color palette from <https://github.com/catppuccin/catppuccin> */
+:root {
+  /* Rosewater 	#f2d5cf 	rgb(242, 213, 207) 	hsl(10,  57%, 88%) */
+  /* Flamingo 	#eebebe 	rgb(238, 190, 190) 	hsl(0,   59%, 84%) */
+  /* Pink 	    #f4b8e4 	rgb(244, 184, 228) 	hsl(316, 73%, 84%) */
+  /* Mauve 	    #ca9ee6 	rgb(202, 158, 230) 	hsl(277, 59%, 76%) */
+  /* Red 	      #e78284 	rgb(231, 130, 132) 	hsl(359, 68%, 71%) */
+  /* Maroon 	  #ea999c 	rgb(234, 153, 156) 	hsl(358, 66%, 76%) */
+  /* Peach 	    #ef9f76 	rgb(239, 159, 118) 	hsl(20,  79%, 70%) */
+  /* Yellow 	  #e5c890 	rgb(229, 200, 144) 	hsl(40,  62%, 73%) */
+  /* Green 	    #a6d189 	rgb(166, 209, 137) 	hsl(96,  44%, 68%) */
+  /* Teal 	    #81c8be 	rgb(129, 200, 190) 	hsl(172, 39%, 65%) */
+  /* Sky 	      #99d1db 	rgb(153, 209, 219) 	hsl(189, 48%, 73%) */
+  /* Sapphire 	#85c1dc 	rgb(133, 193, 220) 	hsl(199, 55%, 69%) */
+  /* Blue 	    #8caaee 	rgb(140, 170, 238) 	hsl(222, 74%, 74%) */
+  /* Lavender 	#babbf1 	rgb(186, 187, 241) 	hsl(239, 66%, 84%) */
+  /* Text 	    #c6d0f5 	rgb(198, 208, 245) 	hsl(227, 70%, 87%) */
+  /* Subtext1 	#b5bfe2 	rgb(181, 191, 226) 	hsl(227, 44%, 80%) */
+  /* Subtext0 	#a5adce 	rgb(165, 173, 206) 	hsl(228, 29%, 73%) */
+  /* Overlay2 	#949cbb 	rgb(148, 156, 187) 	hsl(228, 22%, 66%) */
+  /* Overlay1 	#838ba7 	rgb(131, 139, 167) 	hsl(227, 17%, 58%) */
+  /* Overlay0 	#737994 	rgb(115, 121, 148) 	hsl(229, 13%, 52%) */
+  /* Surface2 	#626880 	rgb(98,  104, 128) 	hsl(228, 13%, 44%) */
+  /* Surface1 	#51576d 	rgb(81,  87,  109) 	hsl(227, 15%, 37%) */
+  /* Surface0 	#414559 	rgb(65,  69,  89) 	hsl(230, 16%, 30%) */
+  /* Base 	    #303446 	rgb(48,  52,  70) 	hsl(229, 19%, 23%) */
+  /* Mantle 	  #292c3c 	rgb(41,  44,  60) 	hsl(231, 19%, 20%) */
+  /* Crust 	    #232634 	rgb(35,  38,  52) 	hsl(229, 20%, 17%) */
+
+  --frappe-rosewater: hsl(10, 57%, 88%);
+  --frappe-flamingo: hsl(0, 59%, 84%);
+  --frappe-pink: hsl(316, 73%, 84%);
+  --frappe-mauve: hsl(277, 59%, 76%);
+  --frappe-red: hsl(359, 68%, 71%);
+  --frappe-maroon: hsl(358, 66%, 76%);
+  --frappe-peach: hsl(20, 79%, 70%);
+  --frappe-yellow: hsl(40, 62%, 73%);
+  --frappe-green: hsl(96, 44%, 68%);
+  --frappe-teal: hsl(172, 39%, 65%);
+  --frappe-sky: hsl(189, 48%, 73%);
+  --frappe-sapphire: hsl(199, 55%, 69%);
+  --frappe-blue: hsl(222, 74%, 74%);
+  --frappe-lavender: hsl(239, 66%, 84%);
+  --frappe-text: hsl(227, 70%, 87%);
+  --frappe-subtext1: hsl(227, 44%, 80%);
+  --frappe-subtext0: hsl(228, 29%, 73%);
+  --frappe-overlay2: hsl(228, 22%, 66%);
+  --frappe-overlay1: hsl(227, 17%, 58%);
+  --frappe-overlay0: hsl(229, 13%, 52%);
+  --frappe-surface2: hsl(228, 13%, 44%);
+  --frappe-surface1: hsl(227, 15%, 37%);
+  --frappe-surface0: hsl(230, 16%, 30%);
+  --frappe-base: hsl(229, 19%, 23%);
+  --frappe-mantle: hsl(231, 19%, 20%);
+  --frappe-crust: hsl(229, 20%, 17%);
+}
+
+/* catppuccin style guide https://github.com/catppuccin/catppuccin/blob/main/docs/style-guide.md */
+:root {
+  --color-background: var(--latte-base);
+  --color-background-header: var(--latte-crust);
+  --color-text: var(--latte-text);
+  --color-link: var(--latte-rosewater);
+
+  --color-primary: var(--latte-lavender);
+
+  --color-button-background: var(--latte-surface2);
+  --color-button-text: var(--latte-text);
+
+  --color-spinner: var(--latte-text);
+
+  --color-table-background: var(--latte-surface0);
+  --color-table-border: var(--latte-overlay0);
+}
+
+/*@media (prefers-color-scheme: dark) {*/
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--frappe-base);
+    --color-background-header: var(--frappe-crust);
+    --color-text: var(--frappe-text);
+    --color-link: var(--frappe-rosewater);
+
+    --color-primary: var(--frappe-lavender);
+
+    --color-button-background: var(--frappe-surface2);
+    --color-button-text: var(--frappe-text);
+
+    --color-spinner: var(--frappe-text);
+
+    --color-table-background: var(--frappe-surface0);
+    --color-table-border: var(--frappe-overlay0);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+  transition: 0.3s;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

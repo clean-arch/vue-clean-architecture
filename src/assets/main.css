@@ -1,0 +1,42 @@
+@import "./base.css";
+
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#app {
+  width: 100%;
+
+  font-weight: normal;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+a {
+  color: var(--color-link);
+  transition: 0.4s;
+  text-decoration: none;
+  border-bottom: 1px dashed;
+}
+
+@media (hover: hover) {
+  a:hover {
+    border-bottom-style: solid;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+}
