@@ -1,6 +1,6 @@
-import type { List } from "@/domain/entities/list";
 import { defineStore } from "pinia";
 import { ref } from "vue";
+import type { List } from "./domain";
 
 export const useListsStore = defineStore("lists", () => {
   const data = ref([] as List[]);

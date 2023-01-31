@@ -1,6 +1,6 @@
-import type { AppFile } from "@/domain/entities/file";
 import { defineStore } from "pinia";
 import { ref } from "vue";
+import type { AppFile } from "./domain";
 
 export const useFilesStore = defineStore("files", () => {
   const data = ref([] as AppFile[]);

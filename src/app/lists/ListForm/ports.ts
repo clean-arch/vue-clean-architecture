@@ -1,5 +1,5 @@
-import type { List } from "@/domain/entities/list";
 import type { BaseCreateApiPort } from "@/shared/lib/ports";
+import type { List } from "../domain";
 
 export interface ListFormApiCreateProps {
   displayName: string;
