@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 import { createPinia } from "pinia";
+import { faker } from "@faker-js/faker";
 
 import App from "./App.vue";
 import router from "./pages/router";
@@ -12,6 +13,8 @@ import {
   BaseSelect,
   BaseTable,
 } from "./shared/uikit";
+
+faker.seed(10);
 
 const pinia = createPinia();
 const app = createApp(App);
