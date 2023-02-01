@@ -7,7 +7,7 @@ const router = createRouter({
     {
       path: "/",
       name: "dashboard",
-      redirect: { name: "audience" },
+      redirect: { name: "audience_contacts" },
     },
     ...audienceRoutes,
     {
