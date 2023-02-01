@@ -7,8 +7,7 @@ import TheBrandLogo from "./TheBrandLogo.vue";
     <div class="container">
       <TheBrandLogo class="logo" />
       <BaseNav>
-        <RouterLink :to="{ name: 'email_files' }">Файлы</RouterLink>
-        <RouterLink :to="{ name: 'audience' }">Аудитория</RouterLink>
+        <RouterLink :to="{ name: 'audience_contacts' }">Контакты</RouterLink>
       </BaseNav>
     </div>
   </header>

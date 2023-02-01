@@ -11,11 +11,6 @@ const router = createRouter({
     },
     ...audienceRoutes,
     {
-      path: "/files",
-      name: "email_files",
-      component: () => import("./FilesPage.vue"),
-    },
-    {
       path: "/:pathMatch(.*)*",
       name: "not_found",
       // route level code-splitting

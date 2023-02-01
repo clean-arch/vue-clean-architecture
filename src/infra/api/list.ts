@@ -1,4 +1,4 @@
-import type { ListApiPort, ListFormApiCreateProps } from "@/app/lists";
+import type { ListApiPort } from "@/app/lists";
 import type { List } from "@/app/lists/domain";
 import { delay } from "@/shared/lib/utils/promise";
 import { faker } from "@faker-js/faker";
@@ -21,17 +21,6 @@ export class MockListApi implements ListApiPort {
       $instance = new MockListApi();
     }
     return $instance;
-  }
-
-  async create(createListData: ListFormApiCreateProps): Promise<List> {
-    const list: List = {
-      id: faker.datatype.uuid(),
-      ...createListData,
-    };
-
-    this.#lists.unshift(list);
-    await delay(1000);
-    return list;
   }
 
   async fetchMany(): Promise<List[]> {

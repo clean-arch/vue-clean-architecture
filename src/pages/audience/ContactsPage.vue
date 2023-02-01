@@ -53,7 +53,6 @@ provide(LISTS_SELECT_API_PROVIDE_KEY, listApi);
       Контакты
       <template #extra>
         <BaseButton @click="openAddContactForm">Добавить контакт</BaseButton>
-        <BaseButton :isPrimary="true">Импортировать контакты</BaseButton>
       </template>
     </BasePageHeader>
     <AudienceListsSelect
