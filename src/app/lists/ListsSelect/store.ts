@@ -1,13 +1,14 @@
 import { useLoader } from "@/shared/lib/composables/loader";
 import { defineInjectKey, validInject } from "@/shared/lib/di";
-import { computed, reactive } from "vue";
+import { defineStore } from "pinia";
+import { computed } from "vue";
 import { useListsStore } from "../store";
 import type { ListsSelectApiPort } from "./ports";
 
 export const LISTS_SELECT_API_PROVIDE_KEY =
-  defineInjectKey<ListsSelectApiPort>("ListsTableApi");
+  defineInjectKey<ListsSelectApiPort>("ListsSelectApi");
 
-export function useListsSelectStore() {
+export const useListsSelectStore = defineStore("ListsSelect", () => {
   const api = validInject(LISTS_SELECT_API_PROVIDE_KEY);
 
   const listsStore = useListsStore();
@@ -25,9 +26,9 @@ export function useListsSelectStore() {
     listsStore.setLists(lists);
   }
 
-  return reactive({
+  return {
     loading: loader.loading,
     selectItems,
     fetchMany,
-  });
-}
+  };
+});

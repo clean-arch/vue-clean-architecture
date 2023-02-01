@@ -1,6 +1,6 @@
 import { useLoader } from "@/shared/lib/composables/loader";
 import { defineInjectKey, validInject } from "@/shared/lib/di";
-import { storeToRefs } from "pinia";
+import { defineStore, storeToRefs } from "pinia";
 import { reactive } from "vue";
 import { useContactsStore } from "../store";
 import type {
@@ -11,7 +11,7 @@ import type {
 export const CONTACTS_TABLE_API_PROVIDE_KEY =
   defineInjectKey<ContactsTableApiPort>("ContactsTableApi");
 
-export function useContactsTableStore() {
+export const useContactsTableStore = defineStore("ContactsTable", () => {
   const api = validInject(CONTACTS_TABLE_API_PROVIDE_KEY);
 
   const contactsStore = useContactsStore();
@@ -23,9 +23,9 @@ export function useContactsTableStore() {
     contactsStore.setContacts(contacts);
   }
 
-  return reactive({
+  return {
     loading: loader.loading,
     contacts,
     fetchMany,
-  });
-}
+  };
+});
