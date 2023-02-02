@@ -1,29 +1,28 @@
-<script lang="ts">
-import { defineComponent, PropType } from "vue";
+<script setup lang="ts">
+import { PropType } from "vue";
 
 interface TableColumn {
   key: string;
   title: string;
 }
 
-export default defineComponent({
-  props: {
-    loading: Boolean,
-    columns: {
-      type: Array as PropType<TableColumn[]>,
-      required: true,
-    },
-    dataItems: {
-      type: Array,
-      required: true,
-    },
+defineProps({
+  cyTest: { type: String, default: "base" },
+  loading: Boolean,
+  columns: {
+    type: Array as PropType<TableColumn[]>,
+    required: true,
+  },
+  dataItems: {
+    type: Array,
+    required: true,
   },
 });
 </script>
 
 <template>
   <div class="wrapper" :class="{ '--loading': loading }">
-    <table>
+    <table :cy-test="`${cyTest}-table`">
       <thead>
         <tr>
           <th v-for="column in columns" :key="column.key">
@@ -32,8 +31,16 @@ export default defineComponent({
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(dataItem, index) in dataItems" :key="dataItem.id || index">
-          <td v-for="column in columns" :key="column.key">
+        <tr
+          v-for="(dataItem, index) in dataItems"
+          :key="dataItem.id || index"
+          :cy-test="`${cyTest}-table-row`"
+        >
+          <td
+            v-for="column in columns"
+            :key="column.key"
+            :cy-test="`${cyTest}-table-col-${column.key}`"
+          >
             <slot :name="column.key" :dataItem="dataItem">{{
               dataItem[column.key]
             }}</slot>

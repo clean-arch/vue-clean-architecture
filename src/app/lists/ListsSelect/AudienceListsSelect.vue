@@ -32,5 +32,5 @@ store.fetchMany();
 </script>
 
 <template>
-  <BaseSelect v-model="value" :items="selectListItems" />
+  <BaseSelect cy-test="lists" v-model="value" :items="selectListItems" />
 </template>

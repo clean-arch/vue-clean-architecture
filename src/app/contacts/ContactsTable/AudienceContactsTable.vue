@@ -28,6 +28,7 @@ watch(
 
 <template>
   <BaseTable
+    cy-test="contacts"
     :loading="store.loading"
     :columns="columns"
     :dataItems="store.contacts"

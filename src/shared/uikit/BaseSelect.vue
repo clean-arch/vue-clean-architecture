@@ -8,6 +8,7 @@ interface SelectItem {
 }
 
 const props = defineProps({
+  cyTest: { type: String, default: "base" },
   items: {
     type: Array as PropType<SelectItem[]>,
     required: true,
@@ -29,7 +30,7 @@ const value = computed({
 </script>
 
 <template>
-  <select v-model="value">
+  <select v-model="value" :cy-test="`${cyTest}-select`">
     <option
       v-for="selectItem in items"
       :key="selectItem.value"
