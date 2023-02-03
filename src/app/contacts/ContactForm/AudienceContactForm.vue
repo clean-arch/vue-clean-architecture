@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, defineEmits } from "vue";
+import { ref } from "vue";
 import { ContactFormApiCreateProps } from "./ports";
 import { useContactFormStore } from "./store";
 
@@ -22,9 +22,13 @@ async function submitForm() {
   <div>
     <div>
       <label>Email</label>
-      <input v-model="contactData.email" />
+      <input
+        cy-test="createContact-formField-email"
+        v-model="contactData.email"
+      />
     </div>
     <BaseButton
+      cy-test="createContact"
       :isPrimary="true"
       :isLoading="store.loading"
       @click="submitForm"

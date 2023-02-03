@@ -33,4 +33,9 @@ describe("Contacts", () => {
       .first()
       .should("have.text", "camryn90@yahoo.com");
   });
+
+  it("should open create contacts page", () => {
+    cy.get("[cy-test=openCreateContactForm-button]").click();
+    cy.location("pathname").should("eq", Page.CreateContact);
+  });
 });

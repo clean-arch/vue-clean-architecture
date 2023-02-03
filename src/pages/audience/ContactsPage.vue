@@ -52,7 +52,9 @@ provide(LISTS_SELECT_API_PROVIDE_KEY, listApi);
     <BasePageHeader>
       Контакты
       <template #extra>
-        <BaseButton @click="openAddContactForm">Добавить контакт</BaseButton>
+        <BaseButton cy-test="openCreateContactForm" @click="openAddContactForm">
+          Добавить контакт
+        </BaseButton>
       </template>
     </BasePageHeader>
     <AudienceListsSelect

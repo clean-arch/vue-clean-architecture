@@ -1,14 +1,16 @@
 <script setup lang="ts">
-defineProps<{
-  isPrimary: boolean;
-  isLoading: boolean;
-}>();
+defineProps({
+  cyTest: { type: String, default: "base" },
+  isPrimary: Boolean,
+  isLoading: Boolean,
+});
 </script>
 
 <template>
   <button
     type="button"
     :class="{ '--primary': isPrimary, '--loading': isLoading }"
+    :cy-test="`${cyTest}-button`"
   >
     <slot />
   </button>
