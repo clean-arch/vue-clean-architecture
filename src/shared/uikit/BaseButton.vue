@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps({
-  cyTest: { type: String, default: "base" },
+  dataTest: { type: String, default: "base" },
   isPrimary: Boolean,
   isLoading: Boolean,
 });
@@ -10,7 +10,7 @@ defineProps({
   <button
     type="button"
     :class="{ '--primary': isPrimary, '--loading': isLoading }"
-    :cy-test="`${cyTest}-button`"
+    :data-test="`${dataTest}-button`"
   >
     <slot />
   </button>

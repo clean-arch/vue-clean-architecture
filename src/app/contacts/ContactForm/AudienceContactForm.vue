@@ -23,12 +23,12 @@ async function submitForm() {
     <div>
       <label>Email</label>
       <input
-        cy-test="createContact-formField-email"
+        data-test="createContact-formField-email"
         v-model="contactData.email"
       />
     </div>
     <BaseButton
-      cy-test="createContact"
+      data-test="createContact"
       :isPrimary="true"
       :isLoading="store.loading"
       @click="submitForm"

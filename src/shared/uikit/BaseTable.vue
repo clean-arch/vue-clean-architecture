@@ -7,7 +7,7 @@ interface TableColumn {
 }
 
 defineProps({
-  cyTest: { type: String, default: "base" },
+  dataTest: { type: String, default: "base" },
   loading: Boolean,
   columns: {
     type: Array as PropType<TableColumn[]>,
@@ -22,7 +22,7 @@ defineProps({
 
 <template>
   <div class="wrapper" :class="{ '--loading': loading }">
-    <table :cy-test="`${cyTest}-table`">
+    <table :data-test="`${dataTest}-table`">
       <thead>
         <tr>
           <th v-for="column in columns" :key="column.key">
@@ -34,12 +34,12 @@ defineProps({
         <tr
           v-for="(dataItem, index) in dataItems"
           :key="dataItem.id || index"
-          :cy-test="`${cyTest}-table-row`"
+          :data-test="`${dataTest}-table-row`"
         >
           <td
             v-for="column in columns"
             :key="column.key"
-            :cy-test="`${cyTest}-table-col-${column.key}`"
+            :data-test="`${dataTest}-table-col-${column.key}`"
           >
             <slot :name="column.key" :dataItem="dataItem">{{
               dataItem[column.key]
