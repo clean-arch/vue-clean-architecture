@@ -29,7 +29,6 @@
             packages = with pkgs; [
               nodejs-18_x
               nodePackages.vue-cli
-              nodePackages.vls # vue
               nodePackages.typescript-language-server # typescript
               nodePackages.vscode-langservers-extracted # html, css, json, eslint
             ];
